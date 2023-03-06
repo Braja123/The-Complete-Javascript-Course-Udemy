@@ -1,0 +1,382 @@
+**********************************************************************JAVASCRIPT**************************************************************
+
+Function - A function is a small piece of code that we can reuse again and again.
+- Functions allows us to write more maintanable code.
+Parameter is the placeholder where faster we store the value to that.
+Argument is the actual value of the placeholder.
+A function without a name is called anonymous function.
+
+We can declare a function in 3 ways i.e.,
+	1-Function Declaration
+	2-Function Experssion
+	3-Arrow Function
+
+// Function Declaration
+function calcAge(birthYear) {
+  return 2019 - birthYear;
+}
+
+const age1 = calcAge(1996);
+
+// Function Experssion
+const calcAge2 = function(birthYear) {
+  return 2022 - birthYear;
+}
+
+const age2 = calcAge2(1996);
+console.log(age1, age2);
+
+- In JS we can take function as a value.
+
+// Arrow Function
+const calAge3 = birthYear => 2025 - birthYear;
+let age3 = calAge3(1996);
+console.log(age3);
+
+- How we mutate an Array;
+Ex: arr[2] = 'das'
+
+- only primitive values are immutable and Array is not a primitive value
+
+- Directly we can not change the Array.
+Ex:
+let arr = [1,2,3]
+
+change the whole array
+Ex: arr = [4,5,6]	// Not possible, getting an error
+
+- We can store anything inside an Array.
+Ex: let arr = [boolean, string, array];
+
+- "push()" used to add element at the end of the Array.
+let arr = ['das', 'sanu', 'dipa'];
+Ex: arr.push('didi');			//O/P- ['das', 'sanu', 'dipa', 'didi']
+
+let newLength = arr.push('didi');
+console.log(newLength)			//O/P - 4(which is position of the newly added element)
+
+- "unshift()" method will add element in the first index of the array.
+
+- "pop()" used to remove the last element of the Array.
+let arr = ['das', 'sanu', 'dipa'];
+Ex: arr.pop();			//O/P- ['das', 'sanu']
+
+let newLength = arr.pop();
+console.log(newLength)			//O/P - dipa(which is the last element of the array)
+
+- "shift()" method will remove the first element of the array.
+
+- "indexOf()" method used to get the index of a perticular element inside an array.
+let arr = ['das', 'sanu', 'dipa'];
+Ex: console.log(arr.indexOf('sanu'));			//O/P- 1(which is index of the element present in the array)
+
+- If we did not find the element then that will return "-1".
+let arr = ['das', 'sanu', 'dipa'];
+Ex: console.log(arr.indexOf('didid'));			//O/P- -1(because not found element in the array)
+
+- "includes()" method will return "true" if found the element in the Array else return "false" if not found the element.
+let arr = ['das', 'sanu', 'dipa'];
+Ex: console.log(arr.includes('sanu'));			//O/P- true(as element found in the array)
+Ex: console.log(arr.includes('didid'));			//O/P- false(as element not found in the array)
+
+- Object:
+const jonas = {
+  firstName: 'gopal',
+  lastName: 'das'
+}
+
+console.log(jonas.firstName);		//O/P- gopal
+console.log(jonas['firstName']);  //Here we can add expression
+
+let nameKey = "Name";
+console.log(jonas['first' + nameKey]);  // O/P- same as other two output
+console.log(jonas.'first' + nameKey);	// We can not write like this, this is an error
+
+Ex:
+const jonas = {
+  firstName: 'gopal',
+  lastName: 'das',
+  job: 'software Engineer',
+  age: 26
+}
+
+console.log(jonas.firstName);
+console.log(jonas['firstName']);  //Here we can add expression
+
+let nameKey = "Name";
+console.log(jonas['first' + nameKey]);  // O/P- same as other two output
+
+const interestedIn = prompt("What do you want to know about Gopal? Choose between firstName, lastName, age, job and friends");
+
+// console.log(interestedIn);  //O/P- job
+// console.log(jonas.interestedIn);  //O/P- undefined, because it does not has interestedIn property
+console.log(jonas[interestedIn]); //O/P- software Engineer, as javascript will look into "interestedIn" and 
+change its value to "job" then give the result
+
+- How we add any property and value to a Object:
+jonas.location = "Hyderabad";
+jonas['twitter'] = "das";
+
+
+Ex:
+const jonas = {
+  firstName: 'jonas',
+  lastName: 'das',
+  job: 'software Engineer',
+  age: 26,
+  friends: ['Michel', 'sanu', 'dipa']
+}
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+//O/P- jonas has 3 friends, and his best friend is called Michel
+
+- Like Array, Object also can hold different types of data.
+
+Ex:
+const jonas = {
+  firstName: 'jonas',
+  lastName: 'das',
+  job: 'software Engineer',
+  birthYear: 1996,
+  hasDriversLicense: false,
+  friends: ['Michel', 'sanu', 'dipa'],
+  calcAge: function() {
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function() {
+    return `${this.firstName} is a ${this.calcAge()} years old teacher, and he has ${this.hasDriversLicense ? 'a' : 'not'} driver's license.`
+  }
+} 
+
+// Here Only need to calculate / call the calcAge() once, after we can use the age property directly
+const res = jonas.calcAge();
+console.log(res);
+console.log(jonas.age);
+
+console.log(jonas.getSummary());
+
+- Continue and Brea in Loop.
+Ex:
+const jonas = [
+  'gopal',
+  'das',
+  26,
+  'sanu',
+  [1,2,3,4],
+  true
+]
+
+// continue is to exit the current iteration of the loop and continue to the next one
+for(let i=0; i<jonas.length; i++) {
+  if(typeof jonas[i] !== 'string') continue;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+// break is used to completely terminate the whole loop 
+for(let i=0; i<jonas.length; i++) {
+  if(typeof jonas[i] === 'number') break;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+- When we don't know how many times the loop will go there need to use While loop.
+
+- Coding challenge website: codewars
+
+- Prompt() method always returns a string value.
+
+- We have different different output methods i.e,
+
+console.log();
+console.warn();
+console.error();
+onsole.table();
+
+- For debugging in console(), just mark where we are getting the error, then reload the page and go next (->) arrow button.
+- We also can add 'debugger' inside the code itself, for the debugging.
+const measureKelvin = () => {
+  const measurement = {
+    type: "temp",
+    unit: "celcius",
+    value: Number(prompt("Degrees Celcius:")),
+  };
+  debugger;
+  const kelvin = measurement.value + 273;
+  return kelvin;
+}; 
+
+
+- In HTML:
+------------
+- Which elements/tags comes inline with another tag is know as Inline Element.Ex: a, span, etc
+- Which elements/tags started with new line is known as Block Element. Ex: div, h1, article, section, etc.
+
+- To define "id" in HTML better to use: id-name
+
+
+DOM - Document Object Model - Structured representation of HTML Documents. 
+Allows javascript to access HTML elements and styles to manupulate(change text, HTML Attributes, and even CSS styles) them.
+
+- textContent - is used to get the content from the element or manupulate the content.
+
+- The "style" object which is used in javascript to manupulate DOM  - is the inline style which we used to write in our normal HTML.
+Ex: <div class="number" style="width: 30rem;">6</div>
+
+- In querySelector() it matches only first class, but if you have more than one same class name then need to use querySelectorAll().
+
+
+https://www.diagrams.net/ - for creating the Flow chart 
+
+
+AST - It is the representation of our entire code inside the engine.
+
+Execution Context - Environment in which a piece of javascript is executed. Stores all the necessary information for some code to be executed.
+
+Methods. - A functions attached to objects is know as Methods.
+
+Arrow Functions - Don't have argument objects and this keyword inside it.
+
+Call Stack - It is a "Place" where execution context get stacked on top of each other, to keep track of where we are in the execution.
+
+Javascript has "one thread of execution" so it will execute a single code at a time.
+
+Scoping - How our program variables are organized and accessed. "Where do variables live?" or where can we access a certain variable and where not ?"
+
+Lexical scoping - Scoping is controlled by placement of functions and blocks in the code.
+
+Scope - Space or environment in which a certain variable is declared(variable environment in case of functions). There is Global scope, function scope and block scope.
+
+Scope of variable - Region of our code where a certain variable can be accessed.
+
+- var is function scoped
+- let and const is block scoped.
+
+- Scoping asks the question "where do variables live?" or "Where can we access a certain variable, and where not?";
+
+- There are three types of scoping in javascript: the global scope, scopes defined by functions and scopes defined by blocks.
+
+- Only let nad const variables and block-scoped. Variables declared with var end up with the closest function scope;
+
+- In javascript we have lexical scoping, so the rules of where we can access variables are based on exactly where in the code functions and blocks are written;
+
+- Every scope always has access to all the variables from all its outer scopes. This is the "scope chain".
+
+- When the variable is not in the current scope, the engine looks up in the scope chain until it finds the variable it's looking for. This is called "variable lookup".
+
+- The scope chain is a one-way street: a scope will never, ever have access to the variables of an inner scope;
+
+- The scope chain in a certain scope is equal to adding together all the variable environments of the all parent scopes;
+
+- The scope chain has nothing to do with the order in which functions were called. It doesn't affect the scope chain at all.
+
+Why TDZ(Temporal Dead Zone) :
+- Makes it easier to avoid and catch errors:accessing variables before declaration is bad practice and should be avoided.
+- Makes const variable actually work.
+
+- Variable created with "var" will creates a property in "window" object
+- But variable which created by "let" or "const" will not creates property in "window" object.
+
+- this keyword/variable: Special variable that is created for execution context(every function). Takes the value of(points to) the "owner" of the function in which the "this" keyword is used.
+- "this" is not static. It depends on how the function is called, and its value is only assigned when the function is actually called.
+- Method - this = <Object that is calling the method>
+- Simple function call - this = undefined(In strict mode. Otherwise points to "window" object in the browser)
+- Arrow functions - this = <this of surrounding function(lexical this)> - Don't get own "this"
+- Event Listener - this = <DOM element that the handler is attached to>
+- this doesn't points to the function itself, and also NOT its variable environment.
+- Please don't use "arrow" functions inside an "object".
+
+- "argument" keywords are exist in normal functions but not in "arrow" functions.
+
+- Primitive Data Types:
+Number, String, Boolean, Undefined, Null, Symbol, BigInt
+
+- Non-primitive/Reference Types/Objects:
+Object Literals, Arrays, Functions, Many More...
+
+- "const" works perfectly in primitive data type but for "objects" we can change the value.
+
+- Shallow copy will only copy the properties in the first level while a deep clone will copy everything.
+
+Object.assign({}, objectName);
+- Here "Object.assign()" will merge the actual object to empty object and then will create a new object.
+
+- In Object Destructuring if you want to mutate any key then want to destructure then wrap the destructuring code to a parenthesis(()).
+
+- In spread operator it does not create new value or arr.
+- It just define the single single value.
+- We use spread operator to build a new arrays or to pass multiple values into a function.
+- The spread operator is to unpack an array while rest is to pack elements into an array.
+
+- The REST pattern basically collects the elements that are unused in the destructuring assignment.
+- The REST pattern will always be last element inside an array.
+- By using Rest operator we can pass multiple arguments into an function at a same time.
+- The REST operator collects all the elements and packed into an array.
+
+- Basically SPREAD operator extracts the value(from array or strings, etc.) into single single value separated by comma, but in the case of REST parameter 
+it collects all the values into an array.	
+
+- Short-Circutting means if the first value is a truthy value it will immediately return that first value.
+
+- Nullish Coalescing Operator(??)
+- Nullish values are of Logical and type, if we don't have value then it will go to the next value.
+- Nullish values are null and undefined(NOT 0 or ''). So they also follow short-circutting.
+
+- LOGICAL ASSIGNMENT OPERATOR(||=)
+- Basically this operator assigns a value to a variable if that variable is currently falsy.
+rest1.numGuests ||= 10;
+
+- NULLISH assignment operator
+rest1.numGuests ??= 10;
+
+- AND assignment operator
+rest1.owner &&= "<ANNONYMOUS>";
+- Basically the Logical AND assignment operator does is to assign a value to a variable if it is currently truthy
+
+- OPTIONAL CHAINING(?.)
+- check if the whole property exist then add the next property else return undefined.
+Ex: console.log(restaurant.openingHours.mon?.open);
+- So here till "?" it checks the property is exist or not as "mon" is not exist that's why it does not go for next and return "undefined" as "restaurant.openingHours.mon" is "undefined.
+
+- OBJECT KEYS()
+- In "Object.keys()" we store the "keys" of a object inside an array.
+
+
+- In Array we used "entries()" like : arrayName.entries() -> res: [0, value];
+- But in Object when we used entries we need to use like: Object.entries(objectName) -> res: [objectKey, objectValue];
+
+- Sets() - It is basically just a collection of unique values so that means a set can never have any duplicates.
+- As "Sets()" looks like object but still we can "iterate" like an array.
+- Set() methods - add(), delete(), clear(), size, has(), 
+- Convert "Set()" to "Array"
+Ex: console.log([...new Set(arrayName)]);
+
+VVI Note:
+- If your goal is to actually store values in order and then retrieve it then the best use case, is to just use an array.  
+
+
+- Map() - It is different from Sets(), as in "Sets()" it wraps inside an object of strings separated by comma.
+- But in "Maps()" it wraps in object but in chaining format like "key" and "value" pair in object.
+- As "Map()" looks like object but still we can "iterate" like an array.
+- We can not convert direct "Object" to "Map" for that first we need to pass "Object" into "Object.entries(objectName)" then pass inside the "Map()" method.
+- Map() own methods - set("key", "value"), get("key"), delete(), clear(), size, has()
+- Convert "Map" to "Array"
+Ex: console.log([...question]);
+
+- In "Array or Sets" we have Simple List like only one value.
+- But in "Object or Maps()" we have "key/value" pairs - keys allows us to describe values
+
+
+// Note: How Strings are accessing to all the methods as only "Objects" such as "arrays" can access all the methods.
+// In behind the screen javascript converts the normal "Strings" to "Object String" and then after "Strings" can access the methods.
+// Whenever we call a method on a string javascript will automatically behind the scenes convert that string primitive to a  string object with the same content. And then it's on that object where the methods are called .
+// And this process is called as "Boxing". Because it basically takes our string and puts it into a box which is the object.
+// like this -> console.log(new String("gopal")) -> It will look like object
+// And when the operation is done then the object is converted back to a regular string primitive and in fact all string methods return 
+primitives even if called on a string object.
+
+- replace() methods creates a new string it doesn't mutate the original one.
+- replace method is case sansitive like other string methods are.
+
+String Methods:
+--------------
+slice(), split(), replace(), toUpperCase(), toLowerCase(), indexOf(), lastIndexOf(), startsWith(), endsWith(), padStart(), padEnd()

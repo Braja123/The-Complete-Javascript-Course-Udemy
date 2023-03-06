@@ -1,0 +1,10 @@
+- Scope chain
+- Variable lookup
+- Function scoped
+- block scoped
+- Temporal Dead Zone
+- Please don't use "arrow" functions inside an "object".
+- "argument" keywords
+- Object.assign
+- Short-Circutting
+- Nullish Coalescing Operator(??)
