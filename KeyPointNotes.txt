@@ -8,3 +8,4 @@
 - Object.assign
 - Short-Circutting
 - Nullish Coalescing Operator(??)
+- Data Intigrity
