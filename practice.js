@@ -1,22 +1,19 @@
-const flight = "LH234";
+const jonas = [
+  'gopal',
+  'das',
+  26,
+  'sanu',
+  [1,2,3,4],
+  true
+]
+// continue is to exit the current iteration of the loop and continue to the next one
+// for(let i=0; i<jonas.length; i++) {
+//   if(typeof jonas[i] !== 'string') continue;
+//   console.log(jonas[i], typeof jonas[i]);
+// }
 
-const gopal = {
-  name: "Gopal Das",
-  passport: 23278367
+// break is used to completely terminate the whole loop 
+for(let i=0; i<jonas.length; i++) {
+  if(typeof jonas[i] === 'number') break;
+  console.log(jonas[i], typeof jonas[i]);
 }
-
-const checkIn = (flightNum, passenger) => {
-  flightNum = "NH654";
-  passenger.name = "Mr " + passenger.name;
-
-  if(passenger.passport === 23278367) {
-    alert("Check In");
-  } else {
-    alert("Wrong password");
-  }
-
-}
-
-checkIn(flight, gopal);
-console.log(flight);
-console.log(gopal);
