@@ -380,3 +380,15 @@ primitives even if called on a string object.
 String Methods:
 --------------
 slice(), split(), replace(), toUpperCase(), toLowerCase(), indexOf(), lastIndexOf(), startsWith(), endsWith(), padStart(), padEnd()
+
+
+Promise:
+-------
+- An object that is used as a placeholder for the future result of an asynchronous operation
+
+LESS FORMAL
+
+- A container for an asynchronous deliverd value
+
+LESS FORMAL
+- A container for future value
