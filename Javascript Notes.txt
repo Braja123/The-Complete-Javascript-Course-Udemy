@@ -1,4 +1,65 @@
 **********************************************************************JAVASCRIPT**************************************************************
+- Brendan Eich - Founder of Javascript
+
+- If a value type is string then in console the color will be WHITE else if number then it will be BLUE
+
+- Number('23') same as +('23)
+
+// 5 falsy values: 0, '', undefined, null, NaN
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('Gopal'));
+// console.log(Boolean({}));
+// console.log(Boolean(''));
+
+const age = 18; // Here "=" is assignment operator
+// "===" is known as strict equality operator.
+// It is strict because does not perform any type coersion
+// So it only returns true when both values exactly the same
+// here "===" is comparision operator
+console.log(age === 18);    // true
+console.log('18' === 18);    // false
+
+// "==" is loose equality operator
+// It does type coersion
+// here "==" is comparision operator
+console.log('18' == 18);    // true
+
+
+//SWITCH CASE
+const day = "monday";
+
+switch (day) {
+  case "monday":
+    console.log("Plan course structure");
+    console.log("Goto coding meetup");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("Not a valid day");
+}
+
+
+// EXPRESSION VS STATEMENTS
+- An Expression is a piece of code that produces a value
+EX: 3+4 // It is a expression bcz it produces a value
+
+- A Statement doesn't produce a value
+Ex: if(23>10) const str='23 is bigger'
+
 
 Function - A function is a small piece of code that we can reuse again and again.
 - Functions allows us to write more maintanable code.
@@ -392,3 +453,7 @@ LESS FORMAL
 
 LESS FORMAL
 - A container for future value
+
+- 
+modal.classList.remove('hidden');
+modal.classList.add('hidden');

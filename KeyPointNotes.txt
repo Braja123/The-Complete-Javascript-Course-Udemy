@@ -1,3 +1,9 @@
+- Template Literals
+- Primitive Data Types
+- let, const, var
+- Type Conversion and Type Coercion
+- Dynamic Typing
+
 - Scope chain
 - Variable lookup
 - Function scoped
