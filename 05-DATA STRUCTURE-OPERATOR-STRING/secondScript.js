@@ -39,6 +39,31 @@ const staffUnique = [...new Set(staff)];
 // );
 // console.log(new Set("gopaldas").size);
 
+const italianFoods = new Set(['pasta', 'gnochi', 'tomatos', 'olive oil', 'garlic', 'basil']);
+const mexicanFoods = new Set(['tortalis', 'beans', 'rice', 'tomatos', 'avocado', 'garlic'])
+
+// ES2025 Set Methods: intersaction(), union(), difference(), symmetricDifference(), isDisjointFrom()
+// intersection() methods are used in Set() to find the "common" between two arrays
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log(commonFoods);
+console.log([...commonFoods]);
+
+// union() gives all the available elements inside both arrays without duplicate
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log(italianMexicanFusion);
+
+// difference() removes the common elements in both arrays
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+console.log(uniqueItalianFoods);
+
+// symmetricDifference() gives all the elements in both arrays without common element
+const uniqueIalianAndMexicanFoods = italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueIalianAndMexicanFoods);
+
+// isDisjointFrom() check one array elements are available in another element
+console.log(italianFoods.isDisjointFrom(mexicanFoods));
+
+
 // Map
 const rest = new Map();
 // Same as "add" inside Set()

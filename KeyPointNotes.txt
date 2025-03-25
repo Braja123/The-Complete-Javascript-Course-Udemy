@@ -15,3 +15,5 @@
 - Short-Circutting
 - Nullish Coalescing Operator(??)
 - Data Intigrity
+- ES6 features
+- Optional Chaining

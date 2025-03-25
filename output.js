@@ -60,3 +60,18 @@ console.log('18' === 18);    // false
 // here "==" is comparision operator
 console.log('18' == 18);    // true
 
+
+// exp
+console.log(3 || 'gopal');
+console.log('' || 'gopal');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 ||null);
+
+const rest1 = {
+    name: 'Capri',
+    numGuests: 0
+}
+rest1.owner = rest1.owner && "<ANO>"
+
+
