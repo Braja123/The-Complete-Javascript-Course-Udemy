@@ -37,7 +37,12 @@ const renderCountry = (data, className = "") => {
   // countriesContainer.style.opacity = 1
 };
 
+
+
 const res = fetch("https://restcountries.com/v2/name/portugal");
+
+//EXTRA - .then((res) => res.json(), err => console.log(err)) - here inside then we can paa 2 arguments first is for resolve() and 2nd is for reject()
+// reject(new Error("You lose")) - it's better to create a Error() object inside reject() method
 
 const getJSON = (url, errorMessage = "Country not found") => {
   return fetch(url).then((response) => {

@@ -454,6 +454,8 @@ LESS FORMAL
 LESS FORMAL
 - A container for future value
 
+- Whatever value we will return from the ".then()" will return a fullfilled value from the promise.
+
 - 
 modal.classList.remove('hidden');
 modal.classList.add('hidden');

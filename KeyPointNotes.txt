@@ -17,3 +17,4 @@
 - Data Intigrity
 - ES6 features
 - Optional Chaining
+Array, Set, Object, Map, ||, &&, ??
