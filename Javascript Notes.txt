@@ -438,6 +438,13 @@ primitives even if called on a string object.
 - replace() methods creates a new string it doesn't mutate the original one.
 - replace method is case sansitive like other string methods are.
 
+Functions:
+----------
+- First class functions is just a feature that a programming language either has or doesn't have. means all functions are values.
+- There are no first class functions in practice, it's just a concept
+- Higher order functions are in practice, which are possible bcz the lanuage supports first class functions.
+
+
 String Methods:
 --------------
 slice(), split(), replace(), toUpperCase(), toLowerCase(), indexOf(), lastIndexOf(), startsWith(), endsWith(), padStart(), padEnd()

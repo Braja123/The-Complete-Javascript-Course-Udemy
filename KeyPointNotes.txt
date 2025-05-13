@@ -18,3 +18,12 @@
 - ES6 features
 - Optional Chaining
 Array, Set, Object, Map, ||, &&, ??
+
+
+- structuredClone - for deep clone
+- Mark and Sweep Algorithm used in Garbage collector
+- fn.name - gives us the function name
+
+Advance DOM:
+-----------
+selectors(. - class, $ - id)
