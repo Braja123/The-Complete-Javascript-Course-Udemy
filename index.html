@@ -5,23 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <style>
+     .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row
+     }
+     .grid-container {
+      display: grid;
+      /* grid-auto-flow: column; */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+     }
+     div:not([class]) {
+      outline: 2px solid black;
+      padding: 0.5em;
+     }
+    </style> -->
+  
+  <style>
+    body {
+      color: red
+    }
+         .container .container1 {
+      color: chocolate;
+     }
+         div.container div.container1 {
+      color: blue;
+     }
+    div .container2 {
+      color: pink;
+    }
+    .container3 {
+      color: green;
+    }
+    #main_id {
+      color: hotpink;
+    }
+    .sec-container {
+      color: blue;
+    }
+    div.sec-container {
+      color: gold;
+    }
+    /* div #main_id {
+      color: black;
+    } */
+
+    
+  </style>
   </head>
   <body>
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <!-- <tbody>
-          <tr>
-              <th class="header-data"></th>
-              <th class="header-data"></th>
-          </tr>
-      </tbody> -->
-      </table>
+      <div class="container">
+        <div class="container1 container2 container3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+        <div class="sec-container" id="main_id">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+      <!-- <div class="container">
+        <div class="sec-container">Hello world</div>
+      </div>
+      <h2 style="text-align: center">User Data Table</h2>
+      <div id="table-container"></div> -->
+      <h2>Flex</h2>
+
+      <div class="flex-container">
+        <div>lorem</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div>
+          Nostrum quidem explicabo aliquid similique corporis totam, unde nam!
+          Eveniet
+        </div>
+        <div>
+          omnis voluptates nihil, accusamus aperiam optio fuga! Veritatis
+          explicabo fugit aut deserunt?
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div>
+          Nostrum quidem explicabo aliquid similique corporis totam, unde nam!
+          Eveniet
+        </div>
+        <div>
+          omnis voluptates nihil, accusamus aperiam optio fuga! Veritatis
+          explicabo fugit aut deserunt?
+        </div>
+      </div>
+      <h2>Grid</h2>
+      <div class="grid-container">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div>
+          Nostrum quidem explicabo aliquid similique corporis totam, unde nam!
+          Eveniet
+        </div>
+        <div>
+          omnis voluptates nihil, accusamus aperiam optio fuga! Veritatis
+          explicabo fugit aut deserunt?
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div>
+          Nostrum quidem explicabo aliquid similique corporis totam, unde nam!
+          Eveniet
+        </div>
+        <div>
+          omnis voluptates nihil, accusamus aperiam optio fuga! Veritatis
+          explicabo fugit aut deserunt?
+        </div>
+      </div>
     </div>
     <script src="practice.js"></script>
   </body>

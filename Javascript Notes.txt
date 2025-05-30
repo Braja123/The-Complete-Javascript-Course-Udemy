@@ -217,7 +217,7 @@ console.log(jonas.age);
 
 console.log(jonas.getSummary());
 
-- Continue and Brea in Loop.
+- Continue and Break in Loop.
 Ex:
 const jonas = [
   'gopal',
